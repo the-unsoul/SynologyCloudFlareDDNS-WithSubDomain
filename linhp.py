@@ -11,10 +11,10 @@ config.read('/etc.defaults/ddns_provider.conf')
 try:
         config['Cloudflare-linhp']
 except KeyError:
-        config['Cloudflare']= {}
+        config['Cloudflare-linhp']= {}
 
-config['Cloudflare']['modulepath'] = '/usr/syno/bin/ddns/cloudflare.php'
-config['Cloudflare']['queryurl'] = 'https://www.cloudflare.com/'
+config['Cloudflare-linhp']['modulepath'] = '/usr/syno/bin/ddns/cloudflare.php'
+config['Cloudflare-linhp']['queryurl'] = 'https://www.cloudflare.com/'
 
 with open('/etc.defaults/ddns_provider.conf', 'w') as configfile:
         config.write(configfile)
